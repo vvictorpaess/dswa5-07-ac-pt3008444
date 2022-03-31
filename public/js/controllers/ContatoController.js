@@ -13,18 +13,16 @@ angular.module('ifsp').controller('ContatoController',
             );
 
         } else { $scope.contato = new Contato(); }
-        /*
-                $scope.salva = function() {
-                  $scope.contato.$save()
-                    .then(function() {
-                        $scope.mensagem = {texto: 'Salvo com sucesso'};
-                        // Limpar o formulário
-                        $scope.contato = new Contato();
-                    })
-                    .catch(function(erro) {
-                        $scope.mensagem = {texto: 'Não foi possível salvar'};
-                    });
-                }; 
-        */
-
+        
+        $scope.salva = function() {
+            $scope.contato.$save()
+            .then(function() {
+                $scope.mensagem = {texto: 'Salvo com sucesso'};
+                // Limpar o formulário
+                $scope.contato = new Contato();
+            })
+            .catch(function(erro) {
+                $scope.mensagem = {texto: 'Não foi possível salvar'};
+            });
+        }; 
     });
