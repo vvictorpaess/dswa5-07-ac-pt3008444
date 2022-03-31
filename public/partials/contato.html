@@ -10,8 +10,10 @@
 
     <div class="form-group">
         <label for="email">Email</label>
-        <div class="input-group">
-            <span class="input-group-addon">@</span>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
             <input type="email" class="form-control" id="email" placeholder="email@exemplo.com" name="email" ng-model="contato.email" required>
         </div>
     </div>
